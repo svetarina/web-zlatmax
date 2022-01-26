@@ -1,0 +1,7 @@
+gulp
+node_modules
+src
+gulpfile.js
+MyProjects.code-workspace
+package-lock.json
+package.json
