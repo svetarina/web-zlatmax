@@ -184,13 +184,13 @@ body {
   flex-direction: column;
   overflow: hidden;
 }
-.container {
+[class*=__container] {
   max-width: 101.25rem;
   margin: 0 auto;
   padding: 0 15px;
 }
 @media (max-width: 47.99875em) {
-  .container {
+  [class*=__container] {
     padding: 0 10px;
   }
 }
@@ -320,11 +320,16 @@ a {
 .body-header__search {
   flex: 1 1 auto;
   padding-right: 1.25rem;
-  padding-left: 158px;
+  padding-left: 20px;
 }
-@media (max-width: 101.25em) {
+@media (min-width: 87.5em) and (max-width: 101.25em) {
   .body-header__search {
-    padding-left: calc(20px + 138 * ((100vw - 320px) / 1300));
+    padding-left: calc(20px + 138 * ((100vw - 1400px) / (1620 - 1400)));
+  }
+}
+@media (min-width: 101.25em) {
+  .body-header__search {
+    padding-left: 158px;
   }
 }
 .search-header {
